@@ -19,6 +19,7 @@ class Food {
     static var totalCooked:Int = 0
     var defaultSellPrice: Double
     var upgradePrice: Double
+    //this is a test
     
     init(_ name: String, cookTime: Int, rating: Double, description:String, sellPrice: Double, defaultSellPrice:Double, upgradePrice:Double) {
         self.name = name

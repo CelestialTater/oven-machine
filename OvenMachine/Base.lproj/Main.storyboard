@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8XA-IQ-cot">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kitchen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OvenMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pi-pG-EfF">
+                                <rect key="frame" x="150" y="177" width="114" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="RJP-jX-8R0"/>
+                                    <constraint firstAttribute="height" constant="68" id="xxI-bQ-gFX"/>
+                                </constraints>
+                                <state key="normal" title="Cook"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hg-dj-2ir"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCu-Ad-Qr6">
+                                <rect key="frame" x="185" y="242" width="44" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fOn-5I-zgc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newOven" translatesAutoresizingMaskIntoConstraints="NO" id="vZl-TR-vW3">
+                                <rect key="frame" x="57" y="320" width="300" height="250"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-wh-s90">
+                                <rect key="frame" x="112" y="80" width="190" height="120"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2uk-In-O8C"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hpv-au-axm"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRW-6k-4kV">
+                                <rect key="frame" x="187" y="671" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jBa-wh-s90" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9xc-qT-1mc"/>
+                            <constraint firstItem="vZl-TR-vW3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="BKk-HZ-nKW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vZl-TR-vW3" secondAttribute="bottom" constant="122" id="Enx-NA-Lcf"/>
+                            <constraint firstItem="sCu-Ad-Qr6" firstAttribute="centerX" secondItem="vZl-TR-vW3" secondAttribute="centerX" id="I4b-Fs-qPG"/>
+                            <constraint firstItem="vZl-TR-vW3" firstAttribute="top" secondItem="sCu-Ad-Qr6" secondAttribute="bottom" constant="57" id="JHv-VU-6L3"/>
+                            <constraint firstItem="jBa-wh-s90" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Shz-83-Y1F"/>
+                            <constraint firstItem="vZl-TR-vW3" firstAttribute="top" secondItem="1pi-pG-EfF" secondAttribute="bottom" constant="75" id="bNH-zu-NUv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bRW-6k-4kV" secondAttribute="bottom" id="egL-5q-oGP"/>
+                            <constraint firstItem="1pi-pG-EfF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="113" id="nFv-B9-WSB"/>
+                            <constraint firstItem="jBa-wh-s90" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="skG-5k-8SO"/>
+                            <constraint firstItem="jBa-wh-s90" firstAttribute="centerX" secondItem="1pi-pG-EfF" secondAttribute="centerX" id="t4X-Tz-3hi"/>
+                            <constraint firstItem="bRW-6k-4kV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="ukL-dC-r23"/>
+                            <constraint firstItem="sCu-Ad-Qr6" firstAttribute="top" secondItem="jBa-wh-s90" secondAttribute="bottom" constant="42" id="ycv-Rt-Hgz"/>
+                            <constraint firstItem="1pi-pG-EfF" firstAttribute="centerX" secondItem="sCu-Ad-Qr6" secondAttribute="centerX" id="zOl-zG-xD0"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Info" id="e2u-Dj-iLz">
+                            <connections>
+                                <action selector="infoAction:" destination="BYZ-38-t0r" id="Dxu-9g-Zdn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Rry-o9-bbO"/>
+                        <barButtonItem title="Upgrades" id="m1U-xU-Njq">
+                            <connections>
+                                <segue destination="W3m-z9-Nfj" kind="show" id="30t-Qq-dK0"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Kitchen" id="nXC-du-rh3">
+                        <barButtonItem key="leftBarButtonItem" title="Stats" id="55X-Pt-MCl">
+                            <connections>
+                                <segue destination="ARB-Zk-UJ0" kind="show" id="Wco-Uj-O0C"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Marketplace" id="cjt-FE-IW2">
+                            <connections>
+                                <segue destination="CMK-YR-hHf" kind="show" id="oK0-C2-JkL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clickButton" destination="1pi-pG-EfF" id="6br-TY-xcS"/>
+                        <outlet property="infoButton" destination="e2u-Dj-iLz" id="TDY-KZ-waf"/>
+                        <outlet property="marketButton" destination="cjt-FE-IW2" id="KMh-A2-AZA"/>
+                        <outlet property="ovenImage" destination="vZl-TR-vW3" id="RDZ-SK-BDv"/>
+                        <outlet property="pickFood" destination="jBa-wh-s90" id="dax-Ny-D7G"/>
+                        <outlet property="shelfCount" destination="bRW-6k-4kV" id="hcn-T9-qdA"/>
+                        <outlet property="statsButton" destination="55X-Pt-MCl" id="mba-tz-Uo0"/>
+                        <outlet property="timerLabel" destination="sCu-Ad-Qr6" id="jgY-vl-PQd"/>
+                        <outlet property="upgradesButton" destination="m1U-xU-Njq" id="EuG-DX-ayp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048.8" y="167.76611694152925"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="tae-kY-vkE">
+            <objects>
+                <viewController id="ARB-Zk-UJ0" customClass="StatsViewController" customModule="OvenMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zIl-C4-jsv"/>
+                        <viewControllerLayoutGuide type="bottom" id="59g-dV-8qi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ri2-8n-jD1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="59E-8F-kqd">
+                                <rect key="frame" x="36" y="114" width="342" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azR-GD-YP5">
+                                <rect key="frame" x="36" y="607" width="342" height="30"/>
+                                <state key="normal" title="Rebirth">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearDataAction:" destination="ARB-Zk-UJ0" eventType="touchUpInside" id="uSM-Jf-UUq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="59E-8F-kqd" firstAttribute="trailing" secondItem="azR-GD-YP5" secondAttribute="trailing" id="3qg-Z7-RFo"/>
+                            <constraint firstItem="59E-8F-kqd" firstAttribute="leading" secondItem="Ri2-8n-jD1" secondAttribute="leadingMargin" constant="16" id="4Hd-0H-OJJ"/>
+                            <constraint firstItem="59g-dV-8qi" firstAttribute="top" secondItem="azR-GD-YP5" secondAttribute="bottom" constant="55" id="AMQ-Fb-ztr"/>
+                            <constraint firstItem="azR-GD-YP5" firstAttribute="top" secondItem="59E-8F-kqd" secondAttribute="bottom" constant="50" id="CC9-yG-Zsg"/>
+                            <constraint firstItem="59E-8F-kqd" firstAttribute="centerX" secondItem="Ri2-8n-jD1" secondAttribute="centerX" id="SiV-bd-ESo"/>
+                            <constraint firstItem="59E-8F-kqd" firstAttribute="leading" secondItem="azR-GD-YP5" secondAttribute="leading" id="XlS-4j-kgk"/>
+                            <constraint firstItem="59E-8F-kqd" firstAttribute="top" secondItem="zIl-C4-jsv" secondAttribute="bottom" constant="50" id="iT5-dq-Ks4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Statistics" id="EEe-5o-iJ7">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="XxO-M4-yL2">
+                            <connections>
+                                <action selector="Help:" destination="ARB-Zk-UJ0" id="JGR-3I-aU5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="clearData" destination="azR-GD-YP5" id="oM2-bW-LNw"/>
+                        <outlet property="helpButton" destination="XxO-M4-yL2" id="WZr-Xd-j21"/>
+                        <outlet property="statsBox" destination="59E-8F-kqd" id="j43-mr-Rfh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9K-N1-Q8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2032" y="-502"/>
+        </scene>
+        <!--Upgrades-->
+        <scene sceneID="bjl-bW-zbZ">
+            <objects>
+                <viewController id="W3m-z9-Nfj" customClass="UpgradesViewController" customModule="OvenMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LAv-va-ddi"/>
+                        <viewControllerLayoutGuide type="bottom" id="8xy-Dd-dV4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v00-MA-wYf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LZ-ga-eK8">
+                                <rect key="frame" x="36" y="235" width="150" height="30"/>
+                                <state key="normal" title="Banana Bread Recipie"/>
+                                <connections>
+                                    <action selector="buyBananaBread:" destination="W3m-z9-Nfj" eventType="touchUpInside" id="tQs-9Y-hbT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WP-FX-mxm">
+                                <rect key="frame" x="229" y="235" width="100" height="30"/>
+                                <state key="normal" title="Oven Upgrade"/>
+                                <connections>
+                                    <action selector="cookSpeedUpgrade:" destination="W3m-z9-Nfj" eventType="touchUpInside" id="MxT-gE-64c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAs-C7-pzE">
+                                <rect key="frame" x="266" y="612" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="92T-DW-7Fz"/>
+                                    <constraint firstAttribute="height" constant="30" id="Neg-mG-rrk"/>
+                                </constraints>
+                                <state key="normal" title="Upgrade"/>
+                                <connections>
+                                    <action selector="sellPriceUpgrade:" destination="W3m-z9-Nfj" eventType="touchUpInside" id="iZp-yZ-LXj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7V-m6-zF6">
+                                <rect key="frame" x="65.666666666666671" y="290" width="91.000000000000014" height="30"/>
+                                <state key="normal" title="Pizza Recipie"/>
+                                <connections>
+                                    <action selector="buyPizza:" destination="W3m-z9-Nfj" eventType="touchUpInside" id="9wR-Np-q2u"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YO-MV-13x">
+                                <rect key="frame" x="52" y="570" width="157" height="114"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating Upgrades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-4I-NFt">
+                                <rect key="frame" x="142.66666666666666" y="514" width="128.99999999999997" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="nDW-S1-VcB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wi-D9-fx5">
+                                <rect key="frame" x="202.66666666666663" y="290" width="167.33333333333337" height="30"/>
+                                <state key="normal" title="Lasagna Recipie"/>
+                                <connections>
+                                    <action selector="buyLasanga:" destination="W3m-z9-Nfj" eventType="touchUpInside" id="kf6-Bt-u7B"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upgrades image" translatesAutoresizingMaskIntoConstraints="NO" id="MkF-PO-oZp">
+                                <rect key="frame" x="92" y="100" width="230" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="DWA-G9-Ngj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78b-D3-eG5">
+                                <rect key="frame" x="186" y="64" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QA-OM-cfT">
+                                <rect key="frame" x="153.66666666666666" y="325" width="106.99999999999997" height="30"/>
+                                <state key="normal" title="Add Oven Shelf"/>
+                                <connections>
+                                    <action selector="addShelf:" destination="W3m-z9-Nfj" eventType="touchUpInside" id="WaF-4h-zJc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3QA-OM-cfT" firstAttribute="centerX" secondItem="v00-MA-wYf" secondAttribute="centerX" id="2Bc-N7-6qQ"/>
+                            <constraint firstItem="7LZ-ga-eK8" firstAttribute="top" secondItem="MkF-PO-oZp" secondAttribute="bottom" constant="10" id="2vX-8A-3Mk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aAs-C7-pzE" secondAttribute="trailing" constant="68" id="7QX-Aq-qvg"/>
+                            <constraint firstItem="MkF-PO-oZp" firstAttribute="centerX" secondItem="v00-MA-wYf" secondAttribute="centerX" id="CYg-10-n3z"/>
+                            <constraint firstItem="aAs-C7-pzE" firstAttribute="leading" secondItem="0YO-MV-13x" secondAttribute="trailing" constant="57" id="EfM-zi-fGS"/>
+                            <constraint firstItem="7LZ-ga-eK8" firstAttribute="centerX" secondItem="w7V-m6-zF6" secondAttribute="centerX" id="FfU-sV-SRQ"/>
+                            <constraint firstItem="8xy-Dd-dV4" firstAttribute="top" secondItem="0YO-MV-13x" secondAttribute="bottom" constant="8" symbolic="YES" id="G9W-4Y-hPk"/>
+                            <constraint firstItem="78b-D3-eG5" firstAttribute="centerX" secondItem="v00-MA-wYf" secondAttribute="centerX" id="HFk-B0-5SS"/>
+                            <constraint firstItem="7LZ-ga-eK8" firstAttribute="baseline" secondItem="0WP-FX-mxm" secondAttribute="baseline" id="Isq-1L-vA3"/>
+                            <constraint firstItem="78b-D3-eG5" firstAttribute="top" secondItem="LAv-va-ddi" secondAttribute="bottom" id="Lmq-7X-ToV"/>
+                            <constraint firstItem="0WP-FX-mxm" firstAttribute="leading" secondItem="7LZ-ga-eK8" secondAttribute="trailing" constant="43" id="N6l-0z-rLX"/>
+                            <constraint firstItem="MkF-PO-oZp" firstAttribute="leading" secondItem="v00-MA-wYf" secondAttribute="leadingMargin" constant="72" id="Pg0-tm-WEP"/>
+                            <constraint firstItem="8xy-Dd-dV4" firstAttribute="top" secondItem="aAs-C7-pzE" secondAttribute="bottom" constant="50" id="ROe-bS-Vy8"/>
+                            <constraint firstItem="3QA-OM-cfT" firstAttribute="top" secondItem="3Wi-D9-fx5" secondAttribute="bottom" constant="5" id="SZP-md-cjA"/>
+                            <constraint firstItem="MkF-PO-oZp" firstAttribute="top" secondItem="78b-D3-eG5" secondAttribute="bottom" constant="15" id="UUL-HR-uF9"/>
+                            <constraint firstItem="w7V-m6-zF6" firstAttribute="top" secondItem="7LZ-ga-eK8" secondAttribute="bottom" constant="25" id="ef8-W7-RYz"/>
+                            <constraint firstItem="MkF-PO-oZp" firstAttribute="centerX" secondItem="IYw-4I-NFt" secondAttribute="centerX" id="fp1-re-guu"/>
+                            <constraint firstItem="0YO-MV-13x" firstAttribute="leading" secondItem="v00-MA-wYf" secondAttribute="leadingMargin" constant="32" id="hNW-bR-Fj0"/>
+                            <constraint firstItem="3Wi-D9-fx5" firstAttribute="leading" secondItem="w7V-m6-zF6" secondAttribute="trailing" constant="46" id="iTD-ka-YJi"/>
+                            <constraint firstItem="7LZ-ga-eK8" firstAttribute="leading" secondItem="v00-MA-wYf" secondAttribute="leadingMargin" constant="16" id="noe-ZX-gXe"/>
+                            <constraint firstItem="0YO-MV-13x" firstAttribute="centerY" secondItem="aAs-C7-pzE" secondAttribute="centerY" id="o2s-4h-pwc"/>
+                            <constraint firstItem="MkF-PO-oZp" firstAttribute="top" secondItem="LAv-va-ddi" secondAttribute="bottom" constant="36" id="sVJ-Q6-fHE"/>
+                            <constraint firstItem="0YO-MV-13x" firstAttribute="top" secondItem="IYw-4I-NFt" secondAttribute="bottom" constant="35" id="tK5-ur-Qxa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Wi-D9-fx5" secondAttribute="trailing" constant="24" id="uW1-UG-G2h"/>
+                            <constraint firstItem="w7V-m6-zF6" firstAttribute="baseline" secondItem="3Wi-D9-fx5" secondAttribute="baseline" id="wKJ-yG-L4W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upgrades" id="HY6-hK-5Gi"/>
+                    <connections>
+                        <outlet property="BananaBread" destination="7LZ-ga-eK8" id="QVs-MX-e0X"/>
+                        <outlet property="BetterSelling" destination="aAs-C7-pzE" id="CDa-Ut-Idf"/>
+                        <outlet property="FasterCooking" destination="0WP-FX-mxm" id="Exc-6K-Eme"/>
+                        <outlet property="FoodToUpgrade" destination="0YO-MV-13x" id="K1x-qF-IgE"/>
+                        <outlet property="Lasagna" destination="3Wi-D9-fx5" id="k1w-BR-kw9"/>
+                        <outlet property="Pizza" destination="w7V-m6-zF6" id="9ak-m0-oN2"/>
+                        <outlet property="Shelf" destination="3QA-OM-cfT" id="jCD-nB-kHc"/>
+                        <outlet property="money" destination="78b-D3-eG5" id="aXx-Fv-Fcy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdR-Jn-nki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031.8840579710147" y="214.4021739130435"/>
+        </scene>
+        <!--Marketplace-->
+        <scene sceneID="X8Q-f5-OzU">
+            <objects>
+                <viewController id="CMK-YR-hHf" customClass="MarketViewController" customModule="OvenMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Lk-Ye-hJU"/>
+                        <viewControllerLayoutGuide type="bottom" id="BOE-aa-zsV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yxo-1J-WnI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="K68-SM-loB">
+                                <rect key="frame" x="298" y="547" width="94" height="29"/>
+                                <connections>
+                                    <action selector="controlAmount:" destination="CMK-YR-hHf" eventType="valueChanged" id="mbP-2S-aqt"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkr-di-aAV">
+                                <rect key="frame" x="339.66666666666669" y="584" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Desired Food:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-Vy-PnP">
+                                <rect key="frame" x="42" y="83" width="330" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Current Hated Food:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBO-rJ-CVP">
+                                <rect key="frame" x="42" y="112" width="330" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oh-7y-GO3">
+                                <rect key="frame" x="330" y="613" width="30" height="30"/>
+                                <state key="normal" title="Sell"/>
+                                <connections>
+                                    <action selector="sellFood:" destination="CMK-YR-hHf" eventType="touchUpInside" id="12T-Qj-XBe"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="tGD-mr-ODb">
+                                <rect key="frame" x="30" y="468" width="215" height="216"/>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newMarket" translatesAutoresizingMaskIntoConstraints="NO" id="nM5-Tl-Zej">
+                                <rect key="frame" x="45" y="133" width="324" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="3ON-1e-OCx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-By-J5g">
+                                <rect key="frame" x="186" y="357" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mkr-di-aAV" firstAttribute="centerX" secondItem="2Oh-7y-GO3" secondAttribute="centerX" id="3rj-Do-Eog"/>
+                            <constraint firstItem="nTY-Vy-PnP" firstAttribute="centerX" secondItem="yxo-1J-WnI" secondAttribute="centerX" id="6M7-A0-FEn"/>
+                            <constraint firstItem="nTY-Vy-PnP" firstAttribute="top" secondItem="1Lk-Ye-hJU" secondAttribute="bottom" constant="19" id="7tv-Mu-pyj"/>
+                            <constraint firstItem="2Oh-7y-GO3" firstAttribute="top" secondItem="Mkr-di-aAV" secondAttribute="bottom" constant="8" symbolic="YES" id="D0D-6O-gAT"/>
+                            <constraint firstItem="nTY-Vy-PnP" firstAttribute="leading" secondItem="yxo-1J-WnI" secondAttribute="leadingMargin" constant="22" id="EeC-2f-kxh"/>
+                            <constraint firstItem="K68-SM-loB" firstAttribute="centerX" secondItem="Mkr-di-aAV" secondAttribute="centerX" id="IZf-bL-y7B"/>
+                            <constraint firstItem="UBO-rJ-CVP" firstAttribute="top" secondItem="nTY-Vy-PnP" secondAttribute="bottom" constant="8" symbolic="YES" id="Jhp-Mo-vxG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K68-SM-loB" secondAttribute="trailing" constant="2" id="KQz-pT-VCB"/>
+                            <constraint firstItem="nTY-Vy-PnP" firstAttribute="leading" secondItem="UBO-rJ-CVP" secondAttribute="leading" id="QBR-e6-G9x"/>
+                            <constraint firstItem="Mkr-di-aAV" firstAttribute="top" secondItem="K68-SM-loB" secondAttribute="bottom" constant="8" symbolic="YES" id="RGf-16-o6y"/>
+                            <constraint firstItem="BOE-aa-zsV" firstAttribute="top" secondItem="tGD-mr-ODb" secondAttribute="bottom" constant="8" symbolic="YES" id="Sh5-Bv-TxF"/>
+                            <constraint firstItem="Of9-By-J5g" firstAttribute="centerX" secondItem="yxo-1J-WnI" secondAttribute="centerX" id="VGU-5G-VPv"/>
+                            <constraint firstItem="UBO-rJ-CVP" firstAttribute="centerX" secondItem="nM5-Tl-Zej" secondAttribute="centerX" id="aHg-bg-fGj"/>
+                            <constraint firstItem="nM5-Tl-Zej" firstAttribute="leading" secondItem="yxo-1J-WnI" secondAttribute="leadingMargin" constant="25" id="dWJ-Sp-osE"/>
+                            <constraint firstItem="tGD-mr-ODb" firstAttribute="leading" secondItem="yxo-1J-WnI" secondAttribute="leadingMargin" constant="10" id="fpl-1d-vPL"/>
+                            <constraint firstItem="BOE-aa-zsV" firstAttribute="top" secondItem="2Oh-7y-GO3" secondAttribute="bottom" constant="49" id="hcs-YZ-4RN"/>
+                            <constraint firstItem="nM5-Tl-Zej" firstAttribute="top" secondItem="UBO-rJ-CVP" secondAttribute="bottom" id="pMf-kp-5Ff"/>
+                            <constraint firstItem="nTY-Vy-PnP" firstAttribute="trailing" secondItem="UBO-rJ-CVP" secondAttribute="trailing" id="tgF-21-QS1"/>
+                            <constraint firstItem="K68-SM-loB" firstAttribute="leading" secondItem="tGD-mr-ODb" secondAttribute="trailing" constant="53" id="v21-54-Q0G"/>
+                            <constraint firstItem="Of9-By-J5g" firstAttribute="top" secondItem="nM5-Tl-Zej" secondAttribute="bottom" id="xwO-CW-MKc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Marketplace" id="quY-e5-L3g"/>
+                    <connections>
+                        <outlet property="count" destination="Mkr-di-aAV" id="tJi-FF-LQn"/>
+                        <outlet property="desiredFood" destination="nTY-Vy-PnP" id="it6-Pw-JS1"/>
+                        <outlet property="hatedFood" destination="UBO-rJ-CVP" id="lup-aa-tQw"/>
+                        <outlet property="itemToSell" destination="tGD-mr-ODb" id="hRl-GJ-Pmf"/>
+                        <outlet property="marketImage" destination="nM5-Tl-Zej" id="pVa-58-2WL"/>
+                        <outlet property="money" destination="Of9-By-J5g" id="0qY-2f-6rQ"/>
+                        <outlet property="sellButton" destination="2Oh-7y-GO3" id="EUN-Oh-Tc6"/>
+                        <outlet property="sellStepper" destination="K68-SM-loB" id="woZ-7d-9ts"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ez4-Bw-dUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031.8840579710147" y="987.22826086956525"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dTa-lq-aPp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="8XA-IQ-cot" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fg7-A6-hEr">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9wM-cc-St6">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Zk-c8-6p0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2a4-8z-Pi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="167.76611694152925"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="newMarket" width="94" height="59.666667938232422"/>
+        <image name="newOven" width="242.66667175292969" height="240"/>
+        <image name="upgrades image" width="240" height="240"/>
+    </resources>
+</document>

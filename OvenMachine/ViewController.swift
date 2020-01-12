@@ -130,8 +130,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             timerLabel.text = "\(Model.counter)"
             
             //updates values when timer is done counting down
-        }else if timerLabel.text == "1" {
-            
+        }else{
+            timer.invalidate()
             //checks if the food fails.
             if failInt == 1{
                 timerLabel.text = "Your \(Model.cookbook[cookbookIndex].getName()) did not turn out!"
@@ -149,7 +149,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 if (Model.upgradesDisabled == false) {
                     upgradesButton.isEnabled = true
                 }
-
+                
             }else{
                 //Displays message and adds food to the foodcooked
                 timerLabel.text = "Your \(Model.cookbook[cookbookIndex].getName()) is done!"
@@ -194,9 +194,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 if (Model.upgradesDisabled == false) {
                     upgradesButton.isEnabled = true
                 }
-                
             }
-            
         }
     }
     
